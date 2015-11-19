@@ -1,5 +1,6 @@
 # coding: utf-8
 #original code by White Villain
+#google search API addon by @ompster
 import random
 from google import search
 
@@ -70,10 +71,10 @@ ME = random.randrange(0,len(infidelTalk))
 searchPhrase = (terrorTalk[one]+(" ")+terrorTalk[two]+(" ")+terrorTalk[three])
 translation = (infidelTalk[DONT]+(" ")+infidelTalk[UNDERESTIMATE]+(" ")+infidelTalk[ME])
  
-print (searchPhrase)
-print (translation)
-lookfor = searchPhrase + translation
 
-print 'Found the following sites: '
+lookfor = searchPhrase + " " + translation
+
+print 'Searching for:' + lookfor
+print 'Searching for sites.... '
 for url in search (lookfor , stop=20):
 	print (url)
