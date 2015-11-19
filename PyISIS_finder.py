@@ -74,7 +74,13 @@ translation = (infidelTalk[DONT]+(" ")+infidelTalk[UNDERESTIMATE]+(" ")+infidelT
 
 lookfor = searchPhrase + " " + translation
 
-print 'Searching for:' + lookfor
-print 'Searching for sites.... '
-for url in search (lookfor , stop=20):
-	print (url)
+search_for = raw_input ("Seach using phrase? y for yes or just hit enter \n >")
+search_for.upper
+
+if search_for == "y" :
+	print 'Searching for:' + lookfor
+	print 'Searching for sites.... '
+	for url in search (lookfor , stop=20):
+		print (url)
+else :
+	print lookfor
